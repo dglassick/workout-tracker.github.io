@@ -37,6 +37,7 @@ module.exports = function (app) {
     app.get('/api/workouts/range', ({body}, res) =>{
         console.log('graph is here');
         Workout.find({})
+        
         .then( range => {
             res.json(range)
         }).catch(err=>{
